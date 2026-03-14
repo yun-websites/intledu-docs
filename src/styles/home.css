@@ -1,0 +1,16 @@
+@media (min-width: 50rem) {
+    main div.content-panel {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+footer {
+    display: none;
+}
+
+@media (min-width: 50rem) {
+    .stagger:where(.astro-fbas2x7z) > *:nth-child(2n) {
+        transform: translateY(0);
+    }
+}

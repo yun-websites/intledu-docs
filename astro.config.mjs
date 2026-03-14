@@ -1,26 +1,49 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+// Basic
+import { defineConfig } from "astro/config";
+import starlight from "@astrojs/starlight";
+// Starlight Integrations
+import react from "@astrojs/react";
+// Starlight Plugins
+import starlightFullViewMode from "starlight-fullview-mode";
+import { viewTransitions } from "astro-vtbot/starlight-view-transitions";
+import starlightLlmsTxt from "starlight-llms-txt";
+// Vite Plugins
+import tailwindcss from "@tailwindcss/vite";
+// Markdown Plugins
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [
-		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
-			sidebar: [
-				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
-				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
-				},
-			],
-		}),
-	],
+    site: "https://intledu.lingyunawa.top",
+
+    integrations: [
+        starlight({
+            title: "IntlEDU Docs",
+            social: [{ icon: "github", label: "GitHub", href: "https://github.com/yun-websites/intledu-docs" }],
+            defaultLocale: "root",
+            locales: {
+                "en-gb": {
+                    label: "English (United Kingdom)",
+                    lang: "en-GB",
+                },
+                root: {
+                    label: "简体中文",
+                    lang: "zh-CN",
+                },
+            },
+            plugins: [starlightFullViewMode({ leftSidebarEnabled: false }), viewTransitions(), starlightLlmsTxt()],
+        }),
+        react(),
+    ],
+
+    markdown: {
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
+    },
+
+    vite: {
+        plugins: [tailwindcss()],
+    },
 });

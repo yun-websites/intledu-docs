@@ -1,0 +1,40 @@
+---
+title: "Home"
+description: Your comprehensive learning resource hub for IGCSE students
+template: splash
+hero:
+    title: "IntlEDU Docs"
+    image:
+        file: ./houston.webp
+    tagline: "Your comprehensive learning resource hub for IGCSE students"
+    actions:
+        - text: "Start Exploring"
+          link: ./0625-physics/g9
+          icon: right-arrow
+        - text: "Contact Author"
+          link: mailto:jim.lin.4549@outlook.com
+          icon: external
+          variant: minimal
+sidebar:
+    order: 0
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+import "../../../styles/home.css";
+
+## What's Available
+
+<CardGrid stagger>
+    <Card title="Physics Resources" icon="pencil">
+        Comprehensive notes, practice questions, and key concepts for IGCSE Physics (0625).
+    </Card>
+    <Card title="Chapter Notes" icon="document">
+        Detailed chapter-by-chapter notes covering all major physics topics and concepts.
+    </Card>
+    <Card title="Key Concepts" icon="add-document">
+        Quick reference guides for important formulas, definitions, and problem-solving techniques.
+    </Card>
+    <Card title="Study Tips" icon="open-book">
+        Learning strategies and exam techniques to maximize your IGCSE performance.
+    </Card>
+</CardGrid>
