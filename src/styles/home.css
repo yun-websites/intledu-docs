@@ -10,7 +10,7 @@ footer {
 }
 
 @media (min-width: 50rem) {
-    .stagger:where(.astro-fbas2x7z) > *:nth-child(2n) {
+    .stagger > *:nth-child(2n) {
         transform: translateY(0);
     }
 }
