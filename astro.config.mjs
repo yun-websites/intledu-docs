@@ -22,13 +22,13 @@ export default defineConfig({
         starlight({
             title: "IntlEDU Docs",
             social: [{ icon: "github", label: "GitHub", href: "https://github.com/yun-websites/intledu-docs" }],
-            defaultLocale: "root",
+            defaultLocale: "zh-cn",
             locales: {
                 "en-gb": {
                     label: "English (United Kingdom)",
                     lang: "en-GB",
                 },
-                root: {
+                "zh-cn": {
                     label: "简体中文",
                     lang: "zh-CN",
                 },
