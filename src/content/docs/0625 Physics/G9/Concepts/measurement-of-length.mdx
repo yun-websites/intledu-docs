@@ -2,9 +2,15 @@
 title: "长度测量"
 sidebar:
     order: 2
+    badge:
+        text: Updated
+        variant: caution
 ---
 
-import "../../../../../styles/docs.css";
+import "@/styles/docs.css";
+import ImageWrapper from "@/components/ImageWrapper.astro";
+import ParallaxErrorImage from "@/components/ParallaxErrorImage.astro";
+import MeasuringUsingBlockImage from "@/components/MeasuringUsingBlockImage.astro";
 
 ## 长度测量
 
@@ -20,6 +26,10 @@ import "../../../../../styles/docs.css";
 
 **a) 过程**
 
+<ImageWrapper>
+    <ParallaxErrorImage />
+</ImageWrapper>
+
 1. 取 3 个开槽砝码并堆叠在一起。
 2. 测量组合高度（例如，3 cm）。
 3. 一个砝码的厚度 = 总高度 ÷ 砝码数量（例如，$ 3 \div 3 = 1 $ cm）。
@@ -33,6 +43,10 @@ import "../../../../../styles/docs.css";
 
 - 将眼睛水平位置垂直于刻度（非视差方法）。
 - 将米尺直接靠在物体上。
+
+<ImageWrapper TranslateY="24">
+    <MeasuringUsingBlockImage />
+</ImageWrapper>
 
 ### 管子的厚度/外直径
 

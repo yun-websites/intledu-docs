@@ -2,10 +2,15 @@
 title: "Measurement of Length"
 sidebar:
     order: 2
+    badge:
+        text: Updated
+        variant: caution
 ---
 
-import "../../../../../../styles/docs.css";
-import { default as ParallaxErrorImage } from "../../../../../../components/ParallaxErrorImage.astro";
+import "@/styles/docs.css";
+import ImageWrapper from "@/components/ImageWrapper.astro";
+import ParallaxErrorImage from "@/components/ParallaxErrorImage.astro";
+import MeasuringUsingBlockImage from "@/components/MeasuringUsingBlockImage.astro";
 
 ## Measurement of Length
 
@@ -21,9 +26,9 @@ import { default as ParallaxErrorImage } from "../../../../../../components/Para
 
 **a) Process**
 
-<div style={{ color: "var(--sl-color-text)", float: "right", scale: "1.3", marginRight: "20px" }}>
+<ImageWrapper>
     <ParallaxErrorImage />
-</div>
+</ImageWrapper>
 
 1. Take 3 slotted masses and stack them together.
 2. Measure the combined height (e.g., 3 cm).
@@ -39,12 +44,16 @@ import { default as ParallaxErrorImage } from "../../../../../../components/Para
 - Position eye level perpendicular to the scale (non-parallax method).
 - Place the metre rule directly against the object.
 
+<ImageWrapper TranslateY="24">
+    <MeasuringUsingBlockImage />
+</ImageWrapper>
+
 ### Thickness / External Diameter of a Tube
 
 **Process**
 
 1. Put boiling tube between two wooden blocks.
-2. Measure the distance of separation with the ruler.
+2. Measure the distance of separation with the ruler
 
 **Precautions**
 
