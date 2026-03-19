@@ -52,7 +52,11 @@ export default defineConfig({
                     lang: "zh-CN",
                 },
             },
-            plugins: [starlightFullViewMode({ leftSidebarEnabled: false }), viewTransitions(), starlightLlmsTxt()],
+            plugins: [
+                starlightFullViewMode({ leftSidebarEnabled: false }),
+                viewTransitions(),
+                starlightLlmsTxt(),
+            ],
         }),
         react(),
     ],
